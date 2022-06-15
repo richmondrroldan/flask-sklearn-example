@@ -19,7 +19,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: tuttinator/flask-sklearn-example:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/flask-sklearn-example:latest
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
